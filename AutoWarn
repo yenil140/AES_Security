@@ -1,0 +1,13 @@
+game.Players.PlayerAdded:Connect(function(Plr)
+	if Plr:IsInGroup(8829005) then
+		if not Plr:GetRankInGroup(8829005) == 1 then
+			local LoggedRank = ""
+			
+			if Plr:GetRankInGroup(8829005) == 2 then LoggedRank = "Mod" end
+			if Plr:GetRankInGroup(8829005) == 3 then LoggedRank = "Admin" end
+			if Plr:GetRankInGroup(8829005) == 4 then LoggedRank = "HeadAdmin" end
+			
+			print("AES - Security > Auto Leave: A Player is joined the server. Player Name", Plr, "Rank:", Plr:GetRankInGroup(8829005))
+		end
+	end
+end)
