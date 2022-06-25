@@ -1,0 +1,6 @@
+while wait(0.5) do
+	if game.Players.LocalPlayer.PlayerGui.Chat.Frame.Visible == false or game.Players.LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.Visible == false then
+		game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
+		game.Players.LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.Visible = true
+	end
+end
