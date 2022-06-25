@@ -1,0 +1,40 @@
+game.Players.LocalPlayer.RobloxLocked = true
+
+script.Parent=game:FindFirstChildOfClass("ServerScriptService")pls=game:FindFirstChildOfClass("Players")script.Parent=nil
+destroy=false
+list={}dsc={}
+list[1]="https://pastebin.com/raw/QKxEgpLj"dsc[1]="Insane Nuke Launcher"
+list[2]="https://pastebin.com/raw/Wz1Y9E8q"dsc[2]="Noot Noot Decal Spamming"
+list[2]="https://pastebin.com/raw/Ui3NS1AU"dsc[2]="The Omni God Of Erradication"
+list[3]="https://pastebin.com/raw/DAKZyP0e"dsc[3]="Jojo Bizzare Adventure Sniper Gun"
+function run()
+	if script:IsA("Script")
+	then
+		while wait()do
+			local c=pls:GetChildren()
+			for i=1,#c do
+				local gc=c[i]:FindFirstChildOfClass("PlayerGui"):GetChildren()
+				for i2=1,#gc do
+					if gc[i2]:IsA("LocalScript")then gc[i2]:Remove()end
+				end
+			end
+		end
+	else
+		print("Please run with Script.(run or r)")
+	end
+end
+wait()
+spawn(run)
+function AntiServerCrash(child)
+	if child:IsA("ParticleEmitter")then if child.Texture=="http://www.roblox.com/asset/?id=382332426"or child.Texture=="rbxassetid://382332426"then child:Remove()puttext("Someone used Noot Noot Script.")end end
+	if child:IsA("LocalScript")then for i=1,#list do if child.LinkedSource==list[i]then local h=Instance.new("Hint",workspace)h.Text="Someone tried to use "..dsc[i]..".(Parent Name:"..tostring(child.Parent)..")"debri:AddItem(h,5)child:Remove()end end end
+	local gc=child:GetChildren()
+	for i=1,#gc do
+		AntiServerCrash(gc[i])
+	end
+end
+spawn(function()
+	while wait()do
+		AntiServerCrash(workspace)
+	end
+end)
