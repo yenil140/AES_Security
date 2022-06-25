@@ -1,0 +1,8 @@
+while wait(0.5) do
+		for _, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if v:IsA("BasePart") then
+				v.Anchored = false
+				game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+			end
+		end
+	end
