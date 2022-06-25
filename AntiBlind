@@ -1,0 +1,6 @@
+game.Players.LocalPlayer.PlayerGui.KCoreUI.ChildAdded:Connect(function(Logged)
+	if Logged.Name == "Blind" then
+		game:service("RunService").RenderStepped:wait()
+		game.Players.LocalPlayer.PlayerGui.KCoreUI.Blind:Destroy()
+	end
+end)
