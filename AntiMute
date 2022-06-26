@@ -1,6 +1,6 @@
-while wait(0.5) do
+game:GetService("RunService").RenderStepped:Connect(function()
 	if game.Players.LocalPlayer.PlayerGui.Chat.Frame.Visible == false or game.Players.LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.Visible == false then
 		game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
 		game.Players.LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.Visible = true
 	end
-end
+end)
