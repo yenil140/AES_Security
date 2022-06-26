@@ -1,3 +1,5 @@
+-- Made by ArasOfficial#8439
+
 getgenv().IpProtection = true
 spoofedIP = "Blocked by AES - Security! DM to ArasOfficial#8439 for buy the Security. "
 
