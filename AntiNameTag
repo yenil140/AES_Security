@@ -1,7 +1,10 @@
-game:GetService("RunService").RenderStepped:Connect(function()
-	for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants())do
-		if v:IsA("BillboardGui") or v:IsA("SurfaceGui") then
-			v:Destroy()
+game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
+	wait(game.Players.RespawnTime)
+	game:GetService("RunService").RenderStepped:Connect(function()
+		for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants())do
+			if v:IsA("BillboardGui") or v:IsA("SurfaceGui") then
+				v:Destroy()
+			end
 		end
-	end
+	end)
 end)
